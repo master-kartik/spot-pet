@@ -6,13 +6,13 @@ export default async function HomePage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000000] to-[#060714] text-white">
      <h1 className="text-4xl cursor-pointer">Sign In</h1>
-      {/* {([...users]).map((user, index)=>(
+      {([...users]).map((user, index)=>(
           <div key={index}>
             <div>Hello</div>
             {user.name}
           
           </div>
-      ))} */}
+      ))}
     </main>
   );
 }
