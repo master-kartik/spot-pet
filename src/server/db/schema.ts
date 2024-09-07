@@ -18,8 +18,8 @@ import {
  */
 export const createTable = pgTableCreator((name) => `spot-pet_${name}`);
 
-export const posts = createTable(
-  "post",
+export const users = createTable(
+  "users",
   {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 256 }),
