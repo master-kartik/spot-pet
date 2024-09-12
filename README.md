@@ -30,8 +30,13 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 
 
 3## TODO
-[ ] deploy
+[x ] deploy
 [ ] basic ui
-[ ] db
-[ ] setup auth
-[ ] setup spotify dev
+[x ] db
+[x ] setup auth
+[ x] setup spotify dev
+[] get user
+[] get their genresa and taste
+[] stup replicate or ollama
+[] get the pet names from them
+[] use any api to fetch images of that breed
