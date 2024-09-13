@@ -18,7 +18,7 @@ const SpotifyProfile = () => {
         const data = await response.json();
 
         if (response.ok) {
-            console.log("data",data.message)
+            // console.log("data",data.message)
             setProfile(data.message);
         } else {
           setError(data.message || "Failed to fetch Spotify profile");

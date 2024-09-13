@@ -30,7 +30,7 @@ interface GenerationConfig {
 }
 
 const generationConfig: GenerationConfig = {
-  temperature: 2,
+  temperature: 1,
   topP: 0.95,
   topK: 64,
   maxOutputTokens: 8192,
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json(); 
 
     const { genres } = body;
-    console.log("genres,", genres)
+    // console.log("genres,", genres)
     const prompt = `You are a skilled pet matchmaker with expertise in music psychology and animal behavior. Your task is to analyze the following music genres: ${genres}, and suggest a unique perfectly suited pet name and breed based on this musical profile.
 
 Step 1: Genre Analysis
@@ -80,7 +80,7 @@ Name: [Suggested name]
 Reason: [3-4 line explanation]
 
 Before finalizing your suggestion, critically evaluate your choices. Ensure they truly capture the spirit of the music genres and would resonate with the potential pet owner. If necessary, refine your selection to achieve the most harmonious match between music taste and pet companionship.`;
-    console.log(prompt, "prompt")
+    // console.log(prompt, "prompt")
     if (!prompt) {
       return NextResponse.json({ error: 'Prompt is required' }, { status: 400 });
     }
