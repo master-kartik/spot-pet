@@ -22,6 +22,7 @@ const Genres = () => {
           console.log("Fetched genres:", data);
           setGenres(data);
           await suggestPetName(data);
+          
         } else {
           setError(data.message || "Failed to fetch Spotify profile");
         }
@@ -31,45 +32,39 @@ const Genres = () => {
     };
 
     fetchClientGenres();
+   
   }, [isSignedIn]);
 
   const suggestPetName = async (genres: string[]) => {
   
-    try {
-      const response = await axios.post('/api./suggestPet', {
-        genres: genres,
+    await axios.post('/api/suggestPet',{
+      genres: genres
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ACCESS_TOKEN'
       }
-    );
-
-      if (response.status === 200) {
-        const suggestions = response.data; 
-        setPetNames(suggestions);
-      } else {
-        setError("Failed to fetch pet name suggestions");
-      }
-    } catch (error) {
-      console.error("Error fetching pet name suggestions:", error);
-      setError("An error occurred while fetching pet name suggestions");
-    }
-  };
-
+    })
+    .then(response => {
+      console.log(response.data);
+      setPetNames(response.data.candidates[0].content.parts[0].text)
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  }
   return (
     <main>
       <div>Genres</div>
-      {isSignedIn && genres.map((genre, index) => (
+      {isSignedIn && genres && genres.map((genre, index) => (
         <div key={index} className="text-lg">{genre}</div>
       ))}
       <div>Suggested Pet Names</div>
-      {petNames.length > 0 ? (
-        petNames.map((name, index) => (
-          <div key={index} className="text-lg">{name}</div>
-        ))
-      ) : (
-        <div>No pet names suggested yet.</div>
-      )}
+      <div>{petNames}</div>
       {error && <div className="text-red-500">{error}</div>}
     </main>
   );
+
 };
 
 export default Genres;
