@@ -15,7 +15,7 @@ const HomeComponent = () => {
         alt="this is a dog playing" 
       />
       <div className="flex flex-col w-[70%] mx-auto absolute inset-0 items-center tracking-tight justify-center text-softWhite">
-        <h2 className="text-6xl text-center font-bold">Discover Your Perfect Pet Match Today!</h2>
+        <h2 className="text-6xl text-center font-neueregrade font-black italic">Discover Your Perfect Pet Match Today!</h2>
         <p className="mt-2 text-lg text-center leading-tight">
           Unleash the fun with our unique web app that pairs your Spotify music taste with the ideal pet and breed for you. Dive into a world of furry companions that resonate with your vibe!
         </p>

@@ -30,7 +30,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        neueregrade:[ 'var(--font-neueregrade)'],
+          // neueRegrade: ['Neue Regrade', 'sans-serif'],
+          // sans: ['var(--font-neueregrade)'],
       },
     },
   },
