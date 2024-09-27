@@ -6,6 +6,9 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
+    images: {
+        domains: ['aceternity.com'],
+      },
     reactStrictMode: false,
     typescript:{
         ignoreBuildErrors: true,

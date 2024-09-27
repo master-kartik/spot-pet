@@ -26,7 +26,7 @@ export const StickyScroll = ({
   const cardLength = content.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index /( cardLength*1.1));
+    const cardsBreakpoints = content.map((_, index) => index /( cardLength*1.4));
     const closestBreakpointIndex = cardsBreakpoints.reduce(
       (acc, breakpoint, index) => {
         const distance = Math.abs(latest - breakpoint);
@@ -64,7 +64,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-screen w-full no-scrollbar overflow-y-auto flex justify-center relative space-x-10 rounded-md"
+      className="h-[90vh] w-full no-scrollbar overflow-y-auto flex my-auto justify-center relative space-x-10 "
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -78,7 +78,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-4xl tracking-tight font-bold text-olive"
+                className="text-2xl font-neueregrade font-bold uppercase tracking-tighter text-olive"
               >
                 {item.title}
               </motion.h2>
@@ -89,7 +89,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg tracking-tight text-charcoal max-w-sm mt-10"
+                className="text-base tracking-tight text-charcoal max-w-sm mt-8"
               >
                 {item.description}
               </motion.p>
@@ -101,7 +101,7 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-96 w-[30vw] rounded-md bg-white sticky top-10 overflow-hidden",
+          "hidden lg:block h-96 w-[30vw] rounded-md bg-white sticky top-20 overflow-hidden",
           contentClassName
         )}
       >

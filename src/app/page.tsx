@@ -8,6 +8,7 @@ import SpotifyProfile from "./_components/SpotifyProfile";
 import Genres from "./_components/Genres";
 import HomeComponent from "./_components/HomeComponent";
 
+
 export default async function HomePage() {
 
 const user =  auth();
@@ -19,7 +20,7 @@ const user =  auth();
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000000] to-[#060714] text-white">
+    <main className="flex overflow-hidden min-h-screen flex-col items-center justify-center text-white">
      <h1 className="text-4xl cursor-pointer">
 
 

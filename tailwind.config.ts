@@ -7,6 +7,17 @@ export default {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
       colors: {
         coral: {
           DEFAULT: '#FF7F50', // Primary accent color
@@ -30,7 +41,8 @@ export default {
         },
       },
       fontFamily: {
-        neueregrade:[ 'var(--font-neueregrade)'],
+        neueregrade:[ 'var(--font-neueregrade)', 'sans-serif'],
+        inter: ['var(--font-inter)', 'sans-serif'],
           // neueRegrade: ['Neue Regrade', 'sans-serif'],
           // sans: ['var(--font-neueregrade)'],
       },

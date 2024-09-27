@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 import { Collapse, IconButton } from "@material-tailwind/react";
@@ -27,7 +27,7 @@ export default function Navbar() {
     >
       {["About Us", "Privacy", "Contact Us", "Sign In"].map((data, index) =>
       index==3?(
-        <div key={index} className="text-3xl hover:bg-dark md:hover:text-white hover:shadow-lg  md:hover:bg-transparent md:shadow-none md:hover:shadow-none p-6 md:p-0 rounded-lg shadow-sm md:mb-0 font-normal md:font-light tracking-tight md:text-sm">
+        <div key={index} className="text-3xl hover:bg-dark md:hover:text-white hover:shadow-lg  md:hover:bg-transparent md:shadow-none md:hover:shadow-none p-6 md:p-0 rounded-lg shadow-sm md:mb-0 md:font-semibold tracking-tight font-medium md:text-sm">
           <SignedOut>
         <SignInButton />
       </SignedOut>
@@ -44,7 +44,7 @@ export default function Navbar() {
                 scrollToTop();
                 setOpenNav(!openNav);
               }}
-              className=" text-3xl hover:bg-dark md:hover:text-white hover:shadow-lg  md:hover:bg-transparent md:shadow-none md:hover:shadow-none p-6 md:p-0 rounded-lg shadow-sm md:mb-0 font-normal md:font-light tracking-tight md:text-sm"
+              className=" text-3xl hover:bg-dark md:hover:text-white hover:shadow-lg  md:hover:bg-transparent md:shadow-none md:hover:shadow-none p-6 md:p-0 rounded-lg shadow-sm md:mb-0 font-normal md:font-medium tracking-tight md:text-sm"
             >
               {data}
             </div>
@@ -53,13 +53,22 @@ export default function Navbar() {
       )}
     </div>
   );
-
+  const [textCol, setTextCol] = useState('text-softWhite');
+  const handler = ()=>{
+    window.scrollY > 600 ? setTextCol('text-charcoal'):setTextCol('text-softWhite');
+    console.log(window.scrollY)
+  }
+  useEffect(() => {
+    window.addEventListener('scroll',()=>handler())
+    
+  }, []);
   return (
-    <div className="flex top-1 items-center left-1/2 transform -translate-x-1/2 text-[#fefefed0] justify-between bg-opacity-20  backdrop-blur-md fixed w-[96vw] lg:w-[40vw] mt-[0vw] rounded-lg  bg-[#B3BFC4] z-50 py-4 px-8">
+    <div className={`flex ${textCol} top-1 items-center left-1/2 transform -translate-x-1/2 text-[#fefefed0] justify-between bg-opacity-20  backdrop-blur-md  fixed w-[96vw] lg:w-[40vw] mt-[0vw] rounded-lg  bg-[#B3BFC4] z-50 py-4 px-8`}>
       <div
-        className="flex -gap-1 items-center text-lg select-none tracking-tight cursor-pointer font-bold z-10"
+        className={`flex -gap-1 items-center text-lg select-none tracking-tight cursor-pointer font-bold z-10`}
       >
         PettoSpot
+        
       </div>
 
       <div className="flex items-center justify-between gap-4">
