@@ -87,16 +87,15 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative object-contain rounded-2xl border border-b-0 flex-shrink-0  md:w-[450px]"
+            className="w-[350px] h-[20rem] max-w-full relative object-contain rounded-md overflow-hidden border border-b-0 flex-shrink-0  md:w-[450px]"
             style={{
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
             }}
             key={item.name}
           >
-            <div className=" relative z-20 text-sm leading-[1.6] object-contain text-gray-100 font-normal">
-                <img className="object-cover rounded-md" src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="" />
-              </div>
+                <img className="object-cover" src={item.name} alt="" />
+              
             {/* <blockquote>
               <div
                 aria-hidden="true"

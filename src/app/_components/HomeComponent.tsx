@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import Genres from './Genres'
 import { StickyScrollReveal } from './StrickyScrollReveal'
 import { Infinite } from './Infinite'
-import { InfiniteLeft } from './InfiniteLeft'
+
 
 
 const HomeComponent = () => {
