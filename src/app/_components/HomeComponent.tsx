@@ -36,7 +36,8 @@ const HomeComponent = () => {
 </div>
 
 <StickyScrollReveal/>
-    
+    <div className='w-full'><img className='w-full' src="/assets/pettospot.png" alt="" /></div>
+
    <div className=''>
 
     <Infinite  direction={"right"}/>
