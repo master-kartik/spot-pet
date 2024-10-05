@@ -1,32 +1,40 @@
+"use client"
 import React from 'react'
 import Navbar from './Navbar'
 import Genres from './Genres'
 import { StickyScrollReveal } from './StrickyScrollReveal'
 import { Infinite } from './Infinite'
-
+import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/nextjs'
+import { useAuth } from "@clerk/nextjs";
 
 
 const HomeComponent = () => {
+  const { isSignedIn } = useAuth(); 
   return (
     <div className=''>
-    <div className='relative '>
+    <div className='relative scroll-container'>
       <Navbar />
       <img 
         src="/assets/bg.gif" 
         className='w-screen h-screen overflow-hidden object-cover top-0' 
         alt="this is a dog playing" 
       />
-      <div className="flex flex-col w-[50%] mx-auto absolute inset-0 items-center justify-center text-softWhite">
-        <h2 className="text-5xl text-center font-neueregrade tracking-tight  font-extrabold uppercase italic">Discover Your Perfect Pet Match Today!</h2>
+      <div className="flex flex-col w-[60%] mx-auto absolute inset-0 items-center justify-center text-background">
+        <h2 className="text-6xl text-center font-neueregrade tracking-tight  font-extrabold uppercase italic">Discover Your Perfect Pet Match Today!</h2>
         <p className="mt-2 text-lg text-center leading-tight">
           Unleash the fun with our unique web app that pairs your Spotify music taste with the ideal pet and breed for you. Dive into a world of furry companions that resonate with your vibe!
         </p>
         <div className="flex font-medium mx-auto text-sm tracking-tight space-x-4 mt-4">
-          <button className="bg-softWhite text-black py-3 px-6  hover:bg-gray-200 transition duration-300">
-          Get Started
+          <button className="bg-secondary text-background py-3 px-6  hover:bg-secondary-focus transition duration-300">
+          <SignedOut>
+        {!isSignedIn ?  <SignInButton/> : <SignInButton/>}
+      </SignedOut>
+      <SignedIn>
+        Get Started
+      </SignedIn>
           </button>
 
-          <button className="border border-softWhite text-softWhite bg-transparent backdrop-blur-md py-3 px-6   hover:bg-softWhite hover:text-black transition duration-300">
+          <button className="border border-background text-background bg-transparent backdrop-blur-md py-3 px-6    hover:text-background transition duration-300">
             Learn More
           </button>
         </div>
@@ -34,8 +42,10 @@ const HomeComponent = () => {
     </div>
 <div className='relative w-full top-96'>
 </div>
+<div className='scroll-item'>
 
 <StickyScrollReveal/>
+</div>
     <div className='w-full'><img className='w-full' src="/assets/pettospot.png" alt="" /></div>
 
    <div className=''>

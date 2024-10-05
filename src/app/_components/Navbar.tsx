@@ -55,8 +55,8 @@ export default function Navbar() {
   );
   const [textCol, setTextCol] = useState('text-softWhite');
   const handler = ()=>{
-    window.scrollY > 600 ? setTextCol('text-charcoal'):setTextCol('text-softWhite');
-    console.log(window.scrollY)
+    window.scrollY > 1200 ? setTextCol('text-charcoal'):setTextCol('text-softWhite');
+    
   }
   useEffect(() => {
     window.addEventListener('scroll',()=>handler())

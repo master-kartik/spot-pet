@@ -4,14 +4,21 @@
 
 @layer utilities {
     /* Hide scrollbar for Chrome, Safari and Opera */
-    /* .no-scrollbar::-webkit-scrollbar {
+    .no-scrollbar::-webkit-scrollbar {
         display: none;
-    } */
+    }
    /* Hide scrollbar for IE, Edge and Firefox */
-    /* .no-scrollbar {
+    .no-scrollbar {
         -ms-overflow-style: none;  
         scrollbar-width: none;  
-  } */
+  }
+  .scroll-container {
+    scroll-snap-type: y mandatory; /* Enable vertical snap */
+  }
+  
+  .scroll-item {
+    scroll-snap-align: start; /* Align items at the start of the container */
+  }
 }
 @font-face {
   font-family: 'Neue Regrade';

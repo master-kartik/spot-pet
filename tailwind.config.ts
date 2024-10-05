@@ -19,6 +19,25 @@ export default {
         },
       },
       colors: {
+        'primary': '#FFD100', // Bright Yellow
+        'primary-hover': '#FFD942', // Slightly darker yellow for hover effects
+        'primary-focus': '#FFD942', // Slightly darker yellow for focus effects
+
+        // Secondary Colors
+        'secondary': '#FF6B6B', // Coral Pink
+        'secondary-hover': '#FF7D7D', // Slightly darker pink for hover effects
+        'secondary-focus': '#FF7D7D', // Slightly darker pink for focus effects
+
+        // Accent Colors
+        'accent': '#40E0D0', // Turquoise
+        'accent-hover': '#40E0D0', // Turquoise is already vibrant, so no hover variation
+
+        // Background Colors
+        'background': '#FFF9E6', // Soft Cream
+
+        // Text Colors
+        'text': '#1A2A40', // Deep Navy
+        'text-secondary': '#4A4A4A', // Charcoal Gray
         coral: {
           DEFAULT: '#FF7F50', // Primary accent color
         },
@@ -29,7 +48,7 @@ export default {
           DEFAULT: '#808000', // Tertiary accent color
         },
         softWhite: {
-          DEFAULT: '#F5F5F5', // Primary background color (Light Mode)
+          DEFAULT: '#eeeff1', // Primary background color (Light Mode)
           dark: '#F5F5F5', // Primary text color (Dark Mode)
         },
         charcoal: {
