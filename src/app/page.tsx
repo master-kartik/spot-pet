@@ -7,6 +7,7 @@ import { db } from "~/server/db";
 import SpotifyProfile from "./_components/SpotifyProfile";
 import Genres from "./_components/Genres";
 import HomeComponent from "./_components/HomeComponent";
+import Footer from "./_components/Footer";
 
 
 export default async function HomePage() {

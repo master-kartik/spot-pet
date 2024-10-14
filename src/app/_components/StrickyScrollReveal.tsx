@@ -5,34 +5,34 @@ import Image from "next/image";
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "Pet Playlist Match",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "Your Spotify profile is more than just music; it's a gateway to finding your furry soulmate! Let us decode your tunes and suggest the perfect pet that fits your unique sound.",
     content: (
       <img src="https://assets.lummi.ai/assets/QmaPtepurWDdb3QbcCnx5iw2Fo7sA8d2HFGGPvXvWt4dTw?auto=format&w=1500" className="min-w-full object-cover h-full" alt="" />
     ),
   },
   {
-    title: "Real time changes",
+    title: "Sonic Sidekicks",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "Meet your new best friend—one that knows all the right notes! We analyze your Spotify habits to suggest pets that will vibe with your musical journey. Get ready for some tail-wagging fun!",
     content: (
       <img src="https://assets.lummi.ai/assets/QmXuBat4ZHghFLomPgvvLfuqnEAp3nArsnQAYQ1NuKoiLi?auto=format&w=1500" className="min-w-full object-cover h-full" alt="" />
     ),
   },
   {
-    title: "Version control",
+    title: "Pawesome Picks",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Discover your perfect pet match based on your Spotify vibes! Whether you’re a rockstar or a classical connoisseur, we’ll suggest furry friends that groove to your playlist. Get ready to unleash some serious cuteness!",
     content: (
       <img src="https://assets.lummi.ai/assets/QmYF32g9bwnxGhgXAKZvRRDEdGcmVkxLbcAqyKSUpqMNY9?auto=format&w=1500" className="min-w-full object-cover h-full" alt="" />
 
     ),
   },
   {
-    title: "Running out of content",
+    title: " Bark-tastic Beats",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "From smooth jazz to high-energy pop, we’ve got the perfect pet waiting for you! Let’s discover which furry friend will dance through life by your side. Good vibes only! Our app connects the dots between your Spotify favorites and the perfect pet match, ensuring every day is filled with joy, laughter, and plenty of cuddles.",
     content: (
       <img src="https://assets.lummi.ai/assets/QmXuBat4ZHghFLomPgvvLfuqnEAp3nArsnQAYQ1NuKoiLi?auto=format&w=1500" className="min-w-full object-cover h-full" alt="" />
 

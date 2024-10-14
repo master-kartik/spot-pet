@@ -24,7 +24,7 @@ export default {
         'primary-focus': '#FFD942', // Slightly darker yellow for focus effects
 
         // Secondary Colors
-        'secondary': '#FF6B6B', // Coral Pink
+        'secondary': '#a21e5f', // Coral Pink
         'secondary-hover': '#FF7D7D', // Slightly darker pink for hover effects
         'secondary-focus': '#FF7D7D', // Slightly darker pink for focus effects
 

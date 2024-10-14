@@ -5,6 +5,8 @@ import { type Metadata } from "next";
 
 
 import { Inter } from 'next/font/google';
+import Navbar from "./_components/Navbar";
+import Footer from "./_components/Footer";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,8 +30,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider>
+
       <html lang="en" className={`  ${neueregrade.variable} ${inter.variable} no-scrollbar` }>
-      <body className="font-inter tracking-tight">{children}</body>
+
+      <body className="font-inter tracking-tight bg-[#f9f9f9]">
+        <Navbar/>
+        {children}
+        <Footer/>
+        </body>
     </html>
     </ClerkProvider>
   );

@@ -7,7 +7,8 @@ import { title } from "process";
 
 export function Infinite({direction}:any) {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+    <div className="h-[40rem] flex flex-col antialiased items-center justify-center relative overflow-hidden">
+      <div className="text-secondary w-[50%] text-5xl font-bold italic mb-10 tracking-tighter leading-6 text-center"><span className="text-6xl font-serif text-primary">"</span>Find Your Furry Muse: Pets That Jam with Your Vibe!</div>
       <InfiniteMovingCards
         items={testimonials}
         direction={direction}
@@ -20,29 +21,27 @@ export function Infinite({direction}:any) {
 const testimonials = [
   {quote:"",
     title:"",
-    name:"https://images.beta.cosmos.so/d991faaf-b853-443b-bd93-8a938301848d?format=jpeg"
+    name:"https://i.pinimg.com/564x/d1/e8/db/d1e8dba6158cb5bfe87a837c81d5e28d.jpg"
   },
   {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "https://images.beta.cosmos.so/68367142-b2b8-4691-8831-abb639051190?format=jpeg",
-    title: "Hamlet",
+   
+    name: "https://i.pinimg.com/564x/25/86/bd/2586bd1949a62095521be61b53116455.jpg",
+
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "https://images.beta.cosmos.so/bf6c4eb2-26a7-48fd-a751-efad56728530?format=jpeg",
-    title: "A Dream Within a Dream",
+    name: "https://i.pinimg.com/564x/cd/ed/28/cded2860541a3028c77cf3ca0a0f6901.jpg",
   },
   {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "https://images.beta.cosmos.so/b5673b9b-bd39-4874-8933-bce4f1370919?format=jpeg",
-    title: "Pride and Prejudice",
+
+    name: "https://i.pinimg.com/564x/b2/1f/62/b21f62546750aff2481806c505e30b92.jpg",
+
   },
   {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "https://images.beta.cosmos.so/ba6b015e-07a2-45ed-a7f3-30b6ea75d118?format=jpeg",
-    title: "Moby-Dick",
+    name: "https://i.pinimg.com/564x/9c/5b/16/9c5b16bc4b355cc24ebf390ac13f8b39.jpg",
+
+  },
+  {
+    name: "https://i.pinimg.com/564x/76/90/c8/7690c860fceb762a99a3cd230cc2c71c.jpg",
+
   },
 ];
