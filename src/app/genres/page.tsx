@@ -103,7 +103,7 @@ const Genres = () => {
             if (navigator.share) {
               try {
                 await navigator.clipboard.writeText(`hehe found my spirit animal using pettospot this is based on my music taste 👀, check yours? \n ${window.location.href}`);
-                // alert('Hey we have copied somthing beautiful in your clipboard please paste that while sharing ')
+                alert('Hey we have copied somthing beautiful in your clipboard please paste that while sharing ')
                 await navigator.share({
                   text: 'hehe found my spirit animal using pettospot this is based on my music taste 👀',
                   files: [file],
@@ -128,12 +128,12 @@ const Genres = () => {
     <>
     <SignedIn>
       <main className="min-h-screen mt-0 bg-[#f9f9f9] ">
-      <div className="flex flex-col my-20 mx-auto px-16 md:px-36 items-start justify-center" >
+      <div className="flex flex-col my-20 mx-auto  items-start justify-center" >
         {loading ? (
           <MultiStepLoaderDemo /> 
         ) : petNames ? (
           <>
-          <div className="py-4" ref={petRef}>
+          <div className="py-4 md:px-36 px-8" ref={petRef}>
             {photos.length > 0 && (
               <img 
                 className="h-[40vh] md:h-[60vh] object-cover w-[95vw] md:w-[80vw]" 
@@ -152,7 +152,7 @@ const Genres = () => {
               </p>
             </section>
             </div>
-            <div className="flex gap-5">
+            <div className="flex gap-5 px-8">
               <button 
                 className="bg-secondary text-background py-3 px-6 hover:bg-secondary-focus transition duration-300"
                 onClick={handleShare} 
