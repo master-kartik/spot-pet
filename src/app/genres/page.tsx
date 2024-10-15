@@ -128,15 +128,15 @@ const Genres = () => {
     <>
     <SignedIn>
       <main className="min-h-screen mt-0 bg-[#f9f9f9] ">
-      <div className="flex flex-col my-20 px-36 items-start justify-center" >
+      <div className="flex flex-col my-20 mx-auto px-16 md:px-36 items-start justify-center" >
         {loading ? (
           <MultiStepLoaderDemo /> 
         ) : petNames ? (
           <>
-          <div className="py-4 px-16" ref={petRef}>
+          <div className="py-4" ref={petRef}>
             {photos.length > 0 && (
               <img 
-                className="h-[60vh] object-cover w-[80vw]" 
+                className="h-[40vh] md:h-[60vh] object-cover w-[95vw] md:w-[80vw]" 
                 src={photos[0]?.urls.full} 
                 alt={petNames.pet} 
                 crossOrigin="anonymous" // Set crossOrigin attribute
@@ -175,7 +175,7 @@ const Genres = () => {
     </main>
     </SignedIn>
     <SignedOut>
-    {permanentRedirect(`/`)}
+    {!isSignedIn && permanentRedirect(`/`)}
     </SignedOut>
     </>
   );

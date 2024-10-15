@@ -12,15 +12,15 @@ const HomeComponent = () => {
   const { isSignedIn } = useAuth(); 
   return (
     <div className=''>
-    <div className='relative scroll-container'>
+    <div className='relative'>
       <img 
         src="/assets/bg.gif" 
-        className='w-screen h-screen overflow-hidden object-cover top-0' 
+        className='w-screen h-[50vh] md:h-screen overflow-hidden object-cover top-0' 
         alt="this is a dog playing" 
       />
-      <div className="flex flex-col w-[60%] mx-auto absolute inset-0 items-center justify-center text-background">
-        <h2 className="text-6xl text-center font-neueregrade tracking-tight  font-extrabold uppercase italic">Discover Your Perfect Pet Match Today!</h2>
-        <p className="mt-2 text-lg text-center leading-tight">
+      <div className="flex flex-col md:w-[60%] mx-auto absolute inset-0 items-center justify-center text-background">
+        <h2 className="text-4xl mt-10 md:text-6xl text-center font-neueregrade tracking-tight  font-extrabold uppercase italic">Discover Your Perfect Pet Match Today!</h2>
+        <p className="mt-2 text-sm mx-10  text-center leading-tight">
           Unleash the fun with our unique web app that pairs your Spotify music taste with the ideal pet and breed for you. Dive into a world of furry companions that resonate with your vibe!
         </p>
         <div className="flex font-medium mx-auto text-sm tracking-tight space-x-4 mt-4">
@@ -47,24 +47,18 @@ const HomeComponent = () => {
         </div>
       </div>
     </div>
-<div className='relative w-full top-96'>
+<div className='relative md:w-full top-96'>
 </div>
 <div className='scroll-item'>
 
 <StickyScrollReveal/>
 </div>
-    <div className='w-full'><img className='w-full' src="/assets/pettospot.png" alt="" /></div>
+    <div className='md:w-full'><img className='md:w-full' src="/assets/pettospot.png" alt="" /></div>
 
-   <div className=''>
     
     <Infinite  direction={"right"}/>
-   </div>
-    
-    <div className='bg-black'>
-
-    {/* <Genres /> */}
-    </div>
-      {/* <div className='tracking-tighter text-8xl bg-white text-black'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nostrum incidunt maiores possimus ducimus corrupti quam pariatur. Laborum assumenda officia illo sapiente debitis expedita eius aperiam blanditiis! Beatae, corporis quas?</div> */}
+   
+ 
     </div>
   )
 }

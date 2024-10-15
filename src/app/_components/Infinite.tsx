@@ -8,7 +8,7 @@ import { title } from "process";
 export function Infinite({direction}:any) {
   return (
     <div className="h-[40rem] flex flex-col antialiased items-center justify-center relative overflow-hidden">
-      <div className="text-secondary w-[50%] text-5xl font-bold italic mb-10 tracking-tighter leading-6 text-center"><span className="text-6xl font-serif text-primary">"</span>Find Your Furry Muse: Pets That Jam with Your Vibe!</div>
+      <div className="text-secondary md:w-[50%] text-5xl font-bold italic mb-10 tracking-tighter md:leading-6 text-center"><span className="text-6xl font-serif text-primary">"</span>Find Your Furry Muse: Pets That Jam with Your Vibe!</div>
       <InfiniteMovingCards
         items={testimonials}
         direction={direction}

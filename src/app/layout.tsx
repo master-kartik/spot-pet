@@ -32,6 +32,9 @@ export default function RootLayout({
     <ClerkProvider>
 
       <html lang="en" className={`  ${neueregrade.variable} ${inter.variable} no-scrollbar` }>
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </head>
 
       <body className="font-inter tracking-tight bg-[#f9f9f9]">
         <Navbar/>
