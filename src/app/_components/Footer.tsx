@@ -17,13 +17,13 @@ const Footer: React.FC = () => {
                         </a>
                     </div>
 
-                    <div className="flex flex-col text-lg text-primary md:flex-row space-y-2 md:space-y-0 md:space-x-8 w-full">
-                        <a href="" className="footer_link w-inline-block">Blog</a>
-                        <a href="" className="footer_link w-inline-block">Team</a>
-                        <a href="" target="_blank" rel="noopener noreferrer" className="footer_link w-inline-block">Careers</a>
-                        <a href="" target="_blank" rel="noopener noreferrer" className="footer_link w-inline-block">Press</a>
-                        <a href="" className="footer_link w-inline-block">Privacy Policy</a>
-                        <a href="" className="footer_link w-inline-block">Terms + Conditions</a>
+                    <div className="flex flex-col flex-shrink justify-end text-lg text-primary md:flex-row space-y-2 md:space-y-0 md:space-x-8 w-full">
+                        <a href="#" className="footer_link w-inline-block">Blog</a>
+                        <a href="#" className="footer_link w-inline-block">Team</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="footer_link w-inline-block">Careers</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="footer_link w-inline-block">Press</a>
+                        <a href="#" className="footer_link w-inline-block">Privacy Policy</a>
+                        <a href="#" className="footer_link w-inline-block">Terms + Conditions</a>
                     </div>
                 </div>
 
