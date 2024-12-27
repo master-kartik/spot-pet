@@ -69,7 +69,7 @@ export default function Navbar() {
   return (
     <div className={`flex ${textCol} font-neueregrade top-1 items-center left-1/2 transform -translate-x-1/2 justify-between bg-opacity-20 backdrop-blur-md fixed w-[96vw] lg:w-[40vw] mt-[0vw] rounded-lg bg-[#B3BFC4] z-50 py-4 px-8`}>
       <div className={`flex -gap-1 items-center text-lg select-none tracking-tight cursor-pointer font-bold z-10`}>
-        <Link href={'/'}>PettoSpot.</Link>
+        <Link href={'/'}>PetPlot.</Link>
       </div>
 
       <div className="flex items-center justify-between gap-4">
